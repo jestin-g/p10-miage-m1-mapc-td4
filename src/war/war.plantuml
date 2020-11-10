@@ -17,6 +17,13 @@ title __WAR's Class Diagram__\n
   
 
   namespace war {
+    class war.Demo {
+        {static} + main()
+    }
+  }
+  
+
+  namespace war {
     class war.Drive {
         + toMove()
     }
@@ -67,7 +74,11 @@ title __WAR's Class Diagram__\n
 
   namespace war {
     class war.Unit {
-        + fight()
+        + name : String
+        + Unit()
+        + giveStuff()
+        + setMoves()
+        + toAttack()
         + toMove()
     }
   }
@@ -80,6 +91,8 @@ title __WAR's Class Diagram__\n
   war.Missile .up.|> war.Attack
   war.Run .up.|> war.Movements
   war.SMG .up.|> war.Attack
+  war.Unit o-- war.Movements : moves
+  war.Unit o-- war.Attack : stuff
 
 
 right footer

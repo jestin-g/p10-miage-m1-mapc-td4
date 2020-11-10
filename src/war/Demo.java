@@ -8,7 +8,7 @@ public class Demo {
         bob.toMove();
         bob.toAttack();
 
-        Unit superCopter = new Unit("SuperCopter");
+        Unit superCopter = new Unit("Super Copter");
         superCopter.setMoves(new Fly());
         superCopter.giveStuff(new Missile());
         superCopter.toMove();
